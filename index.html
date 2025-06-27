@@ -489,9 +489,9 @@
             <div class="whatsapp-content animate-on-scroll">
                 <h2>🎯 Entre no Nosso Grupo VIP</h2>
                 <p>Acesse dicas exclusivas, materiais complementares e tire suas dúvidas direto com nossos especialistas!</p>
-                <a href="#" class="whatsapp-btn" onclick="openWhatsApp()">
+                <a href="#" class="whatsapp-btn" onclick="openWhatsAppGroup()">
                     <span style="font-size: 1.5rem;">💬</span>
-                    Entrar no WhatsApp Agora
+                    Entrar no Grupo WhatsApp
                 </a>
             </div>
         </div>
@@ -536,13 +536,16 @@
             observer.observe(el);
         });
 
-        // WhatsApp function
-        function openWhatsApp() {
-            // Substitua pelo número do seu WhatsApp
-            const phoneNumber = "5511999999999"; // Formato: código do país + DDD + número
-            const message = "Olá! Gostaria de saber mais sobre o Curso de IA 🤖";
-            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-            window.open(url, '_blank');
+        // WhatsApp Group function
+        function openWhatsAppGroup() {
+            // Substitua pelo link do seu grupo do WhatsApp
+            // Para obter o link: abra o grupo no WhatsApp > Configurações do grupo > Convidar para o grupo via link
+            const groupLink = "https://chat.whatsapp.com/InRnbbcXm6QBDRmga7ZliR"; // Insira o link do seu grupo aqui
+            
+            // Alternativa: se você ainda não tem um grupo, use esta URL para criar um
+            // const groupLink = "https://wa.me/5511999999999"; // Substitua pelo seu número para criar o grupo
+            
+            window.open(groupLink, '_blank');
         }
 
         // Parallax effect for hero section
