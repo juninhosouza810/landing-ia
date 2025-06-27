@@ -246,14 +246,6 @@
             font-size: 1.1rem;
         }
 
-        .demo-image {
-            width: 100%;
-            height: auto;
-            border-radius: 15px;
-            object-fit: cover;
-            max-height: 400px;
-        }
-
         /* Features Section */
         .features {
             padding: 80px 0;
@@ -457,9 +449,13 @@
                     </div>
                 </div>
                 <div class="image-container animate-on-scroll">
-                    <img src="https://github.com/user-attachments/assets/b63b4cd0-eb0c-4eee-9815-4086c87d4346" 
-                         alt="Curso de IA - Imagem Demonstrativa" 
-                         class="demo-image">
+                    <div class="image-placeholder">
+                        <h3>🖼️ Imagem Demonstrativa</h3>
+                        <p>Insira aqui uma imagem que represente o curso</p>
+                        <p style="margin-top: 10px; font-size: 0.9rem; opacity: 0.8;">
+                            Exemplo: &lt;img src="sua-imagem.jpg" alt="Curso de IA" style="width: 100%; border-radius: 10px;"&gt;
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -493,9 +489,9 @@
             <div class="whatsapp-content animate-on-scroll">
                 <h2>🎯 Entre no Nosso Grupo VIP</h2>
                 <p>Acesse dicas exclusivas, materiais complementares e tire suas dúvidas direto com nossos especialistas!</p>
-                <a href="#" class="whatsapp-btn" onclick="openWhatsApp()">
+                <a href="#" class="whatsapp-btn" onclick="openWhatsAppGroup()">
                     <span style="font-size: 1.5rem;">💬</span>
-                    Entrar no WhatsApp Agora
+                    Entrar no Grupo WhatsApp
                 </a>
             </div>
         </div>
@@ -507,7 +503,7 @@
         </div>
     </footer>
 
-   <script>
+    <script>
         // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
