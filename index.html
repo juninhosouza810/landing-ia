@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curso de IA - Revolucione seu Negócio</title>
+    <title>Oportunidade Parceria de Sucesso - Paulo César Jurca</title>
     <style>
         * {
             margin: 0;
@@ -12,99 +12,46 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
             color: #333;
             overflow-x: hidden;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Header */
-        header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 0;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .cta-nav {
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            color: white;
-            padding: 12px 24px;
-            border: none;
-            border-radius: 25px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .cta-nav:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
-        }
-
-        /* Hero Section */
-        .hero {
-            padding: 120px 0 80px;
-            text-align: center;
+        .hero-section {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2c3e50 25%, #3498db 75%, #e74c3c 100%);
             position: relative;
-            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
         }
 
-        .hero::before {
+        .hero-section::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"><animate attributeName="r" values="1;2;1" dur="2s" repeatCount="indefinite"/></circle><circle cx="20" cy="20" r="1" fill="white" opacity="0.1"><animate attributeName="r" values="1;2;1" dur="3s" repeatCount="indefinite"/></circle><circle cx="80" cy="30" r="1" fill="white" opacity="0.1"><animate attributeName="r" values="1;2;1" dur="2.5s" repeatCount="indefinite"/></circle></svg>');
-            animation: float 6s ease-in-out infinite;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
         }
 
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            color: white;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 1200px;
+            width: 100%;
             animation: fadeInUp 1s ease-out;
         }
 
         @keyframes fadeInUp {
             from {
                 opacity: 0;
-                transform: translateY(30px);
+                transform: translateY(50px);
             }
             to {
                 opacity: 1;
@@ -112,384 +59,561 @@
             }
         }
 
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-            color: rgba(255, 255, 255, 0.9);
-            animation: fadeInUp 1s ease-out 0.3s both;
+        .main-title {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #3498db, #e74c3c, #fff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
-        .hero-benefits {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(15px);
-            border-radius: 20px;
-            padding: 30px;
-            margin: 40px auto;
-            max-width: 800px;
-            text-align: left;
-            animation: fadeInUp 1s ease-out 0.9s both;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .hero-benefits h3 {
-            color: white;
+        .subtitle {
             font-size: 1.8rem;
-            margin-bottom: 20px;
-            text-align: center;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            color: #ecf0f1;
+            margin-bottom: 2rem;
+            font-weight: 300;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
         }
 
-        .hero-benefits ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .hero-benefits li {
-            color: rgba(255, 255, 255, 0.95);
-            font-size: 1.1rem;
-            margin-bottom: 15px;
-            padding-left: 10px;
-            position: relative;
-            line-height: 1.6;
-            transition: all 0.3s ease;
-        }
-
-        .hero-benefits li:hover {
-            transform: translateX(5px);
-            color: white;
-        }
-
-        .hero-benefits strong {
-            color: #ffd700;
-            font-weight: bold;
-        }
-
-        .hero-cta {
-            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
-            color: white;
-            padding: 18px 40px;
-            border: none;
-            border-radius: 30px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-            margin: 10px;
-            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
-            animation: fadeInUp 1s ease-out 0.6s both;
-        }
-
-        .hero-cta:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.6);
-        }
-
-        /* Media Section */
-        .media-section {
-            background: white;
-            padding: 80px 0;
-            position: relative;
-        }
-
-        .media-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
-        }
-
-        .video-container {
-            position: relative;
-            background: linear-gradient(45deg, #f093fb 0%, #f5576c 100%);
-            border-radius: 20px;
-            padding: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease;
-        }
-
-        .video-container:hover {
-            transform: translateY(-5px);
-        }
-
-        .video-placeholder {
-            background: rgba(255, 255, 255, 0.2);
-            border: 2px dashed rgba(255, 255, 255, 0.5);
-            border-radius: 15px;
-            padding: 60px 20px;
-            text-align: center;
-            color: white;
-            font-size: 1.1rem;
-        }
-
-        .image-container {
-            position: relative;
-            background: linear-gradient(45deg, #4facfe 0%, #00f2fe 100%);
-            border-radius: 20px;
-            padding: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease;
-        }
-
-        .image-container:hover {
-            transform: translateY(-5px);
-        }
-
-        .image-display {
-            width: 100%;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-        }
-
-        /* Features Section */
-        .features {
-            padding: 80px 0;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-
-        .features h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: white;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .feature-card {
+        .target-audience {
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
             border-radius: 20px;
-            padding: 40px 30px;
-            text-align: center;
-            transition: all 0.3s ease;
+            padding: 2rem;
+            margin: 2rem 0;
             border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
         }
 
-        .feature-card:hover {
-            transform: translateY(-10px);
-            background: rgba(255, 255, 255, 0.15);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-        }
-
-        .feature-icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            font-size: 2rem;
-        }
-
-        .feature-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            color: white;
-        }
-
-        .feature-card p {
-            color: rgba(255, 255, 255, 0.8);
-            line-height: 1.6;
-        }
-
-        /* WhatsApp Section */
-        .whatsapp-section {
-            background: #25d366;
-            padding: 60px 0;
+        .audience-text {
+            font-size: 1.4rem;
+            color: #ecf0f1;
             text-align: center;
-            position: relative;
+            font-weight: 300;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .audience-text strong {
+            color: #3498db;
+            font-weight: 700;
+        }
+
+        .commission-highlight {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(231, 76, 60, 0.3);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+
+        .commission-text {
+            font-size: 2rem;
+            color: #fff;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Seção de Exemplos */
+        .examples-section {
+            background: linear-gradient(135deg, #34495e, #2c3e50);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .examples-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .examples-title {
+            font-size: 2.5rem;
+            color: #3498db;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .examples-subtitle {
+            font-size: 1.2rem;
+            color: #ecf0f1;
+            margin-bottom: 3rem;
+            font-weight: 300;
+        }
+
+        .examples-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .example-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 1.5rem;
+            border: 1px solid rgba(52, 152, 219, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             overflow: hidden;
         }
 
-        .whatsapp-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
-            animation: shine 3s infinite;
+        .example-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(52, 152, 219, 0.2);
         }
 
-        @keyframes shine {
-            0% { transform: translateX(-100%); }
-            100% { transform: translateX(100%); }
+        .example-image {
+            width: 100%;
+            height: auto;
+            max-width: 300px;
+            border-radius: 15px;
+            margin: 0 auto 1rem;
+            display: block;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
         }
 
-        .whatsapp-content {
-            position: relative;
-            z-index: 2;
+        .example-image:hover {
+            transform: scale(1.05);
         }
 
-        .whatsapp-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: white;
+        .example-title {
+            font-size: 1.3rem;
+            color: #3498db;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
         }
 
-        .whatsapp-section p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            color: rgba(255, 255, 255, 0.9);
+        .example-description {
+            color: #ecf0f1;
+            font-size: 1rem;
+            line-height: 1.5;
         }
 
-        .whatsapp-btn {
-            background: white;
-            color: #25d366;
-            padding: 18px 40px;
-            border: none;
-            border-radius: 30px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .whatsapp-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-        }
-
-        /* Footer */
-        footer {
-            background: #2c3e50;
-            color: white;
-            padding: 40px 0;
+        .profile-section {
+            background: linear-gradient(135deg, #2c3e50, #34495e, #1a1a1a);
+            padding: 4rem 2rem;
             text-align: center;
         }
 
-        /* Responsive */
+        .profile-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin: 0 auto 2rem;
+            border: 5px solid #3498db;
+            box-shadow: 0 10px 30px rgba(52, 152, 219, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .profile-image:hover {
+            transform: scale(1.05);
+        }
+
+        .profile-name {
+            font-size: 2.5rem;
+            color: #3498db;
+            margin-bottom: 1rem;
+            font-weight: 800;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .expertise-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 2rem;
+            border: 1px solid rgba(52, 152, 219, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .expertise-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(52, 152, 219, 0.2);
+        }
+
+        .expertise-title {
+            font-size: 1.2rem;
+            color: #3498db;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .expertise-description {
+            color: #ecf0f1;
+            font-size: 1rem;
+        }
+
+        .contact-section {
+            background: linear-gradient(135deg, #1a1a1a, #2c3e50);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .contact-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-title {
+            font-size: 2rem;
+            color: #3498db;
+            margin-bottom: 2rem;
+            font-weight: 700;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .contact-item {
+            background: rgba(52, 152, 219, 0.1);
+            border: 2px solid #3498db;
+            border-radius: 15px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            background: rgba(52, 152, 219, 0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(52, 152, 219, 0.3);
+        }
+
+        .contact-label {
+            font-size: 1rem;
+            color: #3498db;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-value {
+            font-size: 1.2rem;
+            color: #ecf0f1;
+            font-weight: 700;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            color: #fff;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            margin: 2rem 0;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(231, 76, 60, 0.4);
+            background: linear-gradient(135deg, #c0392b, #a93226);
+        }
+
+        .floating-elements {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .floating-elements::before,
+        .floating-elements::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(52, 152, 219, 0.1);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .floating-elements::before {
+            width: 300px;
+            height: 300px;
+            top: 10%;
+            left: -10%;
+            animation-delay: -2s;
+        }
+
+        .floating-elements::after {
+            width: 200px;
+            height: 200px;
+            bottom: 10%;
+            right: -5%;
+            animation-delay: -4s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+
+        /* Modal para visualização de imagens */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            animation: fadeIn 0.3s ease;
+        }
+
+        .modal-content {
+            position: relative;
+            margin: auto;
+            padding: 20px;
+            width: 90%;
+            max-width: 800px;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: center;
+        }
+
+        .modal-image {
+            max-width: 100%;
+            max-height: 80vh;
+            border-radius: 10px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .close:hover {
+            color: #3498db;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Responsividade */
         @media (max-width: 768px) {
-            .hero h1 {
+            .main-title {
                 font-size: 2.5rem;
             }
-
-            .media-container {
-                grid-template-columns: 1fr;
+            
+            .subtitle {
+                font-size: 1.3rem;
             }
-
-            .features-grid {
-                grid-template-columns: 1fr;
+            
+            .commission-text {
+                font-size: 1.5rem;
             }
-
-            .whatsapp-section h2 {
+            
+            .profile-name {
                 font-size: 2rem;
             }
+            
+            .audience-text {
+                font-size: 1.1rem;
+            }
+            
+            .examples-title {
+                font-size: 2rem;
+            }
+            
+            .examples-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .expertise-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .example-card {
+                padding: 1rem;
+            }
+
+            .example-image {
+                max-width: 250px;
+            }
         }
 
-        /* Animations */
-        .animate-on-scroll {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease;
-        }
-
-        .animate-on-scroll.animated {
-            opacity: 1;
-            transform: translateY(0);
+        @media (max-width: 480px) {
+            .main-title {
+                font-size: 2rem;
+            }
+            
+            .examples-title {
+                font-size: 1.8rem;
+            }
+            
+            .example-image {
+                max-width: 200px;
+            }
+            
+            .modal-content {
+                width: 95%;
+                padding: 10px;
+            }
         }
     </style>
 </head>
 <body>
-    <header>
-        <nav class="container">
-            <div class="logo">🤖 IA Curso</div>
-            <a href="#whatsapp" class="cta-nav">Entrar no WhatsApp</a>
-        </nav>
-    </header>
-
-    <section class="hero">
-        <div class="container">
-            <h1>Domine a IA e Transforme seu Negócio</h1>
-            <p>Aprenda a usar Inteligência Artificial de forma prática e revolucione sua área de atuação</p>
+    <section class="hero-section">
+        <div class="floating-elements"></div>
+        <div class="hero-content">
+            <h1 class="main-title">OPORTUNIDADE PARCERIA DE SUCESSO</h1>
             
-            <div class="hero-benefits">
-                <h3>O que você vai aprender:</h3>
-                <ul>
-                    <li>💎 Como a Inteligência Artificial está revolucionando o mercado de <strong>semi jóias</strong></li>
-                    <li>🛠️ Crie programas e ferramentas utilitárias sem precisar saber programação</li>
-                    <li>🤖 Use agentes de IA para <strong>editar e montar imagens das suas peças</strong></li>
-                </ul>
+            <div class="target-audience">
+                <p class="audience-text">PARA <strong>CONTADORES, ADVOGADOS, ENGENHEIROS, ARQUITETOS E CORRETORES DE IMÓVEIS</strong></p>
+            </div>
+
+            <div class="commission-highlight">
+                <p class="commission-text">INDICANDO CLIENTES PARA REGULARIZAÇÃO DE OBRAS NA RECEITA FEDERAL</p>
+                <p class="commission-text">RECEBA COMISSÃO DE 10% SOBRE O VALOR DE HONORÁRIOS</p>
+            </div>
+
+            <a href="#exemplos" class="cta-button">VER EXEMPLOS DE SUCESSO</a>
+        </div>
+    </section>
+
+    <section class="examples-section" id="exemplos">
+        <div class="examples-container">
+            <h2 class="examples-title">EXEMPLOS REAIS DE CASOS DE SUCESSO</h2>
+            <p class="examples-subtitle">Veja alguns dos resultados obtidos em regularizações já realizadas</p>
+            
+            <div class="examples-grid">
+                <div class="example-card">
+                    <img src="https://raw.githubusercontent.com/user/repo/main/exemplo1.jpg" alt="Exemplo 1 - Regularização" class="example-image" onclick="openModal(this.src)">
+                    <div class="example-title">CASO 1: ECONOMIA DE R$ 20.846,33</div>
+                    <div class="example-description">Regularização completa que resultou em economia significativa para o cliente, demonstrando a eficiência do processo.</div>
+                </div>
+                
+                <div class="example-card">
+                    <img src="https://raw.githubusercontent.com/user/repo/main/exemplo2.jpg" alt="Exemplo 2 - Regularização" class="example-image" onclick="openModal(this.src)">
+                    <div class="example-title">CASO 2: VALOR PAGO R$ 1.984,60</div>
+                    <div class="example-description">Processo de regularização otimizado que permitiu pagamento reduzido e economia substancial para o proprietário.</div>
+                </div>
+                
+                <div class="example-card">
+                    <img src="https://raw.githubusercontent.com/user/repo/main/exemplo3.jpg" alt="Exemplo 3 - Regularização" class="example-image" onclick="openModal(this.src)">
+                    <div class="example-title">CASO 3: ECONOMIA DE R$ 61.235,97</div>
+                    <div class="example-description">Regularização complexa com resultado excepcional, provando a expertise em casos de grande porte e complexidade.</div>
+                </div>
+            </div>
+
+            <a href="#contato" class="cta-button">QUERO FAZER PARTE DESTA PARCERIA</a>
+        </div>
+    </section>
+
+    <section class="profile-section">
+        <div class="profile-container">
+            <img src="https://via.placeholder.com/200x200/3498db/ffffff?text=FOTO" alt="Paulo César Jurca" class="profile-image">
+            
+            <h2 class="profile-name">PAULO CÉSAR JURCA</h2>
+            
+            <div class="expertise-grid">
+                <div class="expertise-card">
+                    <div class="expertise-title">ESPECIALISTA EM REGULARIZAÇÃO DE OBRAS</div>
+                    <div class="expertise-description">Especialização completa em regularização de obras na Receita Federal</div>
+                </div>
+                
+                <div class="expertise-card">
+                    <div class="expertise-title">LICITAÇÕES E CONTRATOS ADMINISTRATIVOS</div>
+                    <div class="expertise-description">Ampla experiência em processos licitatórios e contratos públicos</div>
+                </div>
+                
+                <div class="expertise-card">
+                    <div class="expertise-title">GESTÃO DE OBRAS</div>
+                    <div class="expertise-description">Gestão completa e eficiente de projetos e obras</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contato">
+        <div class="contact-container">
+            <h2 class="contact-title">ENTRE EM CONTATO AGORA</h2>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-label">Instagram</div>
+                    <div class="contact-value">@jm.engenharia79</div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-label">WhatsApp</div>
+                    <div class="contact-value">(18) 98187-9566</div>
+                </div>
             </div>
             
-            <a href="#curso" class="hero-cta">🚀 Quero Aprender Agora</a>
+            <a href="https://wa.me/5518981879566" class="cta-button" target="_blank">FALAR NO WHATSAPP AGORA</a>
         </div>
     </section>
 
-    <section class="media-section" id="curso">
-        <div class="container">
-            <div class="media-container">
-                <div class="video-container animate-on-scroll">
-                    <video controls width="100%" class="video-display" style="border-radius: 15px; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);">
-                        <source src="https://github.com/user-attachments/assets/f3481d25-4dfb-424e-807f-aa1d770376da" type="video/mp4">
-                        Seu navegador não suporta a reprodução de vídeo.
-                    </video>
-                </div>
-                <div class="image-container animate-on-scroll">
-                    <img src="https://github.com/user-attachments/assets/ee6aa949-15ea-476b-9744-309cac4c2ff1" alt="Curso de IA - Demonstração" class="image-display">
-                </div>
-            </div>
+    <!-- Modal para visualização de imagens -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <div class="modal-content">
+            <img class="modal-image" id="modalImg">
         </div>
-    </section>
-
-    <section class="features">
-        <div class="container">
-            <h2 class="animate-on-scroll">O que você vai aprender</h2>
-            <div class="features-grid">
-                <div class="feature-card animate-on-scroll">
-                    <div class="feature-icon">💎</div>
-                    <h3>IA no Mundo das Semi Jóias</h3>
-                    <p>Descubra como aplicar inteligência artificial para otimizar processos, análise de tendências e automação no setor de semi jóias. Revolucione seu negócio com tecnologia de ponta.</p>
-                </div>
-                <div class="feature-card animate-on-scroll">
-                    <div class="feature-icon">⚙️</div>
-                    <h3>Programas Utilitários Simples</h3>
-                    <p>Aprenda a criar ferramentas úteis e programas automatizados de forma simples e intuitiva. Sem complicações, apenas resultados práticos para seu dia a dia.</p>
-                </div>
-                <div class="feature-card animate-on-scroll">
-                    <div class="feature-icon">📸</div>
-                    <h3>Agentes de IA para Fotos</h3>
-                    <p>Crie agentes inteligentes que fazem montagens e edições automáticas de suas fotos. Economize tempo e obtenha resultados profissionais com inteligência artificial.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="whatsapp-section" id="whatsapp">
-        <div class="container">
-            <div class="whatsapp-content animate-on-scroll">
-                <h2>🎯 Entre no Nosso Grupo VIP</h2>
-                <p>Acesse dicas exclusivas, materiais complementares e tire suas dúvidas direto com nossos especialistas!</p>
-                <a href="#" class="whatsapp-btn" onclick="openWhatsAppGroup()">
-                    <span style="font-size: 1.5rem;">💬</span>
-                    Entrar no Grupo WhatsApp
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Curso de IA. Todos os direitos reservados. Transforme seu futuro com inteligência artificial.</p>
-        </div>
-    </footer>
+    </div>
 
     <script>
-        // Smooth scrolling
+        function openModal(src) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImg');
+            modal.style.display = 'block';
+            modalImg.src = src;
+        }
+
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
+
+        // Fechar modal com ESC
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // Smooth scroll para links âncora
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -503,49 +627,11 @@
             });
         });
 
-        // Animate on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animated');
-                }
+        // Fallback para imagens que não carregam
+        document.querySelectorAll('.example-image').forEach(img => {
+            img.addEventListener('error', function() {
+                this.src = 'https://via.placeholder.com/300x400/3498db/ffffff?text=EXEMPLO';
             });
-        }, observerOptions);
-
-        document.querySelectorAll('.animate-on-scroll').forEach(el => {
-            observer.observe(el);
-        });
-
-        // WhatsApp Group function
-        function openWhatsAppGroup() {
-            // Substitua pelo link do seu grupo do WhatsApp
-            // Para obter o link: abra o grupo no WhatsApp > Configurações do grupo > Convidar para o grupo via link
-            const groupLink = "https://chat.whatsapp.com/InRnbbcXm6QBDRmga7ZliR?mode=r_t"; // Insira o link do seu grupo aqui
-            
-            // Alternativa: se você ainda não tem um grupo, use esta URL para criar um
-            // const groupLink = "https://wa.me/5511999999999"; // Substitua pelo seu número para criar o grupo
-            
-            window.open(groupLink, '_blank');
-        }
-
-        // Parallax effect for hero section
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const hero = document.querySelector('.hero');
-            if (hero) {
-                hero.style.transform = `translateY(${scrolled * 0.5}px)`;
-            }
-        });
-
-        // Add floating animation to feature cards
-        document.querySelectorAll('.feature-card').forEach((card, index) => {
-            card.style.animationDelay = `${index * 0.2}s`;
-            card.style.animation = `float 6s ease-in-out infinite`;
         });
     </script>
 </body>
